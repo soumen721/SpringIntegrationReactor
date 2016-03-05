@@ -18,7 +18,7 @@ import reactor.Environment;
 import reactor.bus.EventBus;
 
 @SpringBootApplication
-@PropertySource("classpath:message.properties")
+//@PropertySource("classpath:message.properties")
 @IntegrationComponentScan("org.sou.spring")
 public class Application implements CommandLineRunner {
 	private static Log logger = LogFactory.getLog(Application.class);
