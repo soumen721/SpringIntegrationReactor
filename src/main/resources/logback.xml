@@ -10,43 +10,14 @@
 	<!-- Ned appender to write to file -->
 	<appender name="FILE" class="ch.qos.logback.core.FileAppender">
 		<!-- Name of the file where the log messages are written -->
-		<file>${user.home}/logs/bbpslogs/BillFetchRequestResponse.log</file>
+		<file>${user.home}/logs/SpringIntg.log</file>
 		<encoder>
 			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
 			</pattern>
 		</encoder>
 	</appender>
-	<appender name="FILE_PAYMENT" class="ch.qos.logback.core.FileAppender">
-		<!-- Name of the file where the log messages are written -->
-		<file>${user.home}/logs/bbpslogs/BillPaymentRequestResponse.log</file>
-		<encoder>
-			<pattern>%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n
-			</pattern>
-		</encoder>
-	</appender>
-	<logger
-		name="com.rssoftware.ou.simulator.processor.ou.OUBillFetchRequestProcessor"
-		level="INFO">
-		<appender-ref ref="FILE" />
-	</logger>
-	<logger
-		name="com.rssoftware.ou.simulator.processor.ou.OUBillFetchResponseProcessor"
-		level="INFO">
-		<appender-ref ref="FILE" />
-	</logger>
-	<logger
-		name="com.rssoftware.ou.simulator.processor.ou.OUBillPaymentRequestProcessor"
-		level="INFO">
-		<appender-ref ref="FILE_PAYMENT" />
-	</logger>
-	<logger
-		name="com.rssoftware.ou.simulator.processor.ou.OUBillPaymentResponseProcessor"
-		level="INFO">
-		<appender-ref ref="FILE_PAYMENT" />
-	</logger>
-
 	<!-- Setting the root level of logging to INFO -->
-	<root level="info">
+	<root level="DEUG">
 		<appender-ref ref="STDOUT" />
 	</root>
 </configuration>

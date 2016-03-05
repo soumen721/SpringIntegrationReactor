@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 public class IntegrationRestController {
-
 	private static Log logger = LogFactory.getLog(IntegrationRestController.class);
 
 	@Autowired
